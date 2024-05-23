@@ -523,6 +523,10 @@ form button:hover {
         padding: 10px 10px; /* Adjust padding for smaller screens */
     }
 
+    .splash-content h1 {
+        font-size: 2em;
+    }
+
     /* Navigation */
     nav ul {
         display: none;
