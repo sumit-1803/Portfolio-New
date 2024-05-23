@@ -56,3 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(updateTitle, 1000); // Change 2000 to adjust the interval in milliseconds
 });
+
+
+
+document.querySelector('.nav-toggle').addEventListener('click', function() {
+    document.querySelector('header').classList.toggle('show-sidebar');
+});

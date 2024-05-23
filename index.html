@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Sumit Kumar</title>
+    <link rel="shortcut icon" href="./assets/portfolio-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <div id="splash-screen" class="splash-screen">
@@ -14,18 +15,18 @@
 </div>
 
 <!-- Hero section starts -->
+
 <body>
     <header>
+        <button class="nav-toggle">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">My Projects</a></li>
+                <li><a href="#projects">My Projects</a></li>
                 <li><a href="#service">Service</a></li>
             </ul>
-
             <ul>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#project">Project</a></li>
+                <li><a href="assets\RESUME 2024 updated.pdf" download>Resume</a></li> 
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -33,39 +34,134 @@
     <section class="intro-section">
         <div class="intro-content">
             <div class="intro-text">
-                <h1 class="hero-h1">I'm <span class="highlight">Sumit ,</span><br>A  <span class="i-title-wrapper highlight">Developer</span></h1>
+                <h1 class="hero-h1">I'm <span class="highlight">Sumit ,</span><br>A <span
+                        class="i-title-wrapper highlight">Developer</span></h1>
             </div>
         </div>
     </section>
 
 
-<!-- My works starts -->
+    <!-- My works starts -->
 
-    <section class="works-section">
+    <section id="projects" class="works-section">
         <h2>My Works</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <img src="./images/coffee.jpg" alt="Coffee-Quality-Prediction">
-                <h3>Coffee Quality Prediction</h3>
-                <p>Developed a coffee quality prediction ML model with 90% accuracy using random forest algorithm and made a frontend using flask</p>
+                <a target="_blank" href="https://github.com/sumit-1803/Coffee-Quality_Prediction">
+                    <h3 class="highlight">Coffee Quality Prediction</h3>
+                </a>
+                <p>Coffee quality prediction ML model with 90% accuracy using random forest algorithm and made a
+                    frontend using flask</p>
             </div>
             <div class="project-card">
                 <img src="./images/wellnest.jpg" alt="WellNest.AI">
-                <h3>WellNest.AI</h3>
-                <p>Description of WellNest.AI project...</p>
+                <a target="_blank" href="https://github.com/sumit-1803/WellNest.AI">
+                    <h3 class="highlight">WellNest.AI</h3>
+                </a>
+                <p>AI-Powered Health & Wellness Platform - Predictive health models to assess diabetes risk, heart
+                    disease, and estimate
+                    calorie expenditure.</p>
             </div>
             <div class="project-card">
                 <img src="./images/stockprice.jpg" alt="Stock-Price-Prediction">
-                <h3>Stock Price Prediction</h3>
-                <p>Description of Stock Price Prediction project...</p>
+                <a target="_blank" href="https://github.com/sumit-1803/Stock-Price-Prediction">
+                    <h3 class="highlight">Stock Price Prediction</h3>
+                </a>
+                <p>Stock Price Prediction Platform built with Flask, uses deep learning algorithms like LSTM to analyze
+                    historical data,
+                    providing accurate and real-time stock price forecasts via a user-friendly interface.</p>
             </div>
             <div class="project-card">
-                <img src="./images/netflix.webp" alt="Netflix-MERN-Stack-Clone">
-                <h3>Netflix MERN Stack Clone</h3>
-                <p>Description of Netflix MERN Stack Clone project...</p>
+                <img src="./images/netflix.jpg" alt="Netflix-MERN-Stack-Clone">
+                <a target="_blank" href="https://github.com/sumit-1803/Netflix-Main">
+                    <h3 class="highlight" w>Netflix MERN Stack Clone</h3>
+                </a>
+                <p>INetflix Clone, built with the MERN stack, offers a seamless streaming experience with features
+                    like user
+                    authentication, video playback, and personalized recommendations, all within an intuitive and
+                    responsive interface.</p>
             </div>
         </div>
     </section>
+
+
+    <!-- Contact ME Section -->
+    <section id="contact">
+        <div class="c">
+            <div class="c-bg"></div>
+            <div class="c-wrapper">
+                <div class="c-left">
+                    <div class="c-top">
+                        <h2 class="c-title highlight">Let's Discuss Your Project</h2>
+                        <div class="c-info">
+                            <div class="c-info-item">
+                                <img class="c-icon" src="./assets/phone.png" alt="Phone Icon">
+                                +91 8587 003009
+                            </div>
+                            <div class="c-info-item">
+                                <img class="c-icon" src="./assets/email.png" alt="Email Icon">
+                                Contact@sumit-1803.com
+                            </div>
+                            <div class="c-info-item">
+                                <img class="c-icon" src="./assets/location.png" alt="Location Icon">
+                                219, Munirka Village, New Delhi - 110067
+                            </div>
+                        </div>
+                        <p class="c-desc">Feel free to reach out to discuss your project requirements with us.</p>
+                    </div>
+                </div>
+                <div class="c-right">
+                    <form id="contact-form">
+                        <!-- Form fields go here -->
+                        <input type="text" placeholder="Name" name="user_name" id="user_name">
+                        <input type="text" placeholder="Subject" name="user_subject" id="user_subject">
+                        <input type="email" placeholder="Email" name="user_email" id="user_email">
+                        <textarea placeholder="Message..." name="message" id="message" rows="5"></textarea>
+                        <button class="highlight" type="submit">Submit</button>
+                        <div class="thanks" id="thanksMessage"></div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script src="./js/contact.js"></script>
+    </section>
+
+    <!-- Services Section -->
+    <section id="service" class="services-section">
+        <h2 class="highlight">My Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="./images/web-development.jpg" alt="Web Development">
+                <h3 class="highlight">Web Development</h3>
+                <p>I offer custom web development services tailored to your business needs, using the latest technologies
+                    such as HTML, CSS, JavaScript, and frameworks like React and Node.js.</p>
+            </div>
+            <div class="service-card">
+                <img src="./images/mobile-development.jpg" alt="Mobile App Development">
+                <h3 class="highlight">Mobile App Development</h3>
+                <p>Imobile app development services cover both iOS and Android platforms, utilizing languages like Swift
+                    and Kotlin, as well as cross-platform frameworks like React Native to deliver high-quality mobile
+                    solutions.</p>
+            </div>
+            <div class="service-card">
+                <img src="./images/machine-learning.jpg" alt="Machine Learning and Data Analysis">
+                <h3 class="highlight">Machine Learning and Data Analysis</h3>
+                <p>I specialize in machine learning and data analysis projects, offering predictive analytics, natural
+                    language processing, and data visualization solutions using tools such as Python, TensorFlow, and
+                    scikit-learn.</p>
+            </div>
+            <div class="service-card">
+                <img src="./images/uiux-design.jpg" alt="UI/UX Design">
+                <h3 class="highlight">UI/UX Design</h3>
+                <p>IUI/UX design services focus on creating intuitive and engaging user interfaces, wireframing,
+                    prototyping, and usability testing, utilizing design tools like Adobe XD, Figma, and Sketch.</p>
+            </div>
+        </div>
+    </section>
+
 
 
 
