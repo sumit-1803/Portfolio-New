@@ -49,6 +49,10 @@
                 <li><a href="#service">Service</a></li>
             </ul>
             <ul>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider"></span>
+            </label>
                 <li><a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a></li>
                 <li><a href="https://www.linkedin.com/in/sumit1803/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </li>
@@ -179,49 +183,7 @@
     </section>
 
 
-    <!-- Contact ME Section -->
-    <section id="contact">
-        <div class="c">
-            <div class="c-bg"></div>
-            <div class="c-wrapper">
-                <div class="c-left">
-                    <div class="c-top contact-animation">
-                        <h2 class="c-title highlight">Let's Discuss Your Project</h2>
-                        <div class="c-info">
-                            <div class="c-info-item">
-                                <img class="c-icon" src="./assets/phone.png" alt="Phone Icon">
-                                +91 8587 003009
-                            </div>
-                            <div class="c-info-item">
-                                <img class="c-icon" src="./assets/email.png" alt="Email Icon">
-                                sumit182003@gmail.com
-                            </div>
-                            <div class="c-info-item">
-                                <img class="c-icon" src="./assets/location.png" alt="Location Icon">
-                                219, Munirka Village, New Delhi - 110067
-                            </div>
-                        </div>
-                        <p class="c-desc">Feel free to reach out to discuss your project requirements with me.</p>
-                    </div>
-                </div>
-                <div class="c-right">
-                    <form id="contact-form">
-                        <!-- Form fields go here -->
-                        <input type="text" placeholder="Name" name="user_name" id="user_name">
-                        <input type="text" placeholder="Subject" name="user_subject" id="user_subject">
-                        <input type="email" placeholder="Email" name="user_email" id="user_email">
-                        <textarea placeholder="Message..." name="message" id="message" rows="5"></textarea>
-                        <button class="highlight" type="submit">Submit</button>
-                        <div class="thanks" id="thanksMessage"></div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-        <script src="./js/contact.js"></script>
-    </section>
-
+    
     <!-- Services Section -->
     <section id="service" class="services-section">
         <h2 class="highlight">My Services</h2>
@@ -235,7 +197,7 @@
                     advanced
                     frameworks like React and Node.js, I ensure that your digital presence reflects innovation and
                     functionality at its best.</p>
-            </div>
+                </div>
             <div class="service-card">
                 <img src="./images/services/mobile dev.jpg" alt="Mobile App Development">
                 <h3 class="highlight">Mobile App Development</h3>
@@ -244,7 +206,7 @@
                     React
                     Native, I ensure the delivery of seamless and top-tier mobile solutions that cater to your business
                     needs with precision and excellence.</p>
-            </div>
+                </div>
             <div class="service-card">
                 <img src="./images/services/machine learning.jpg" alt="Machine Learning and Data Analysis">
                 <h3 class="highlight">Machine Learning and Data Analysis</h3>
@@ -254,22 +216,64 @@
                     analytics to natural language processing and data visualization, I provide tailored solutions to
                     unlock
                     insights and drive informed decisions for your business.</p>
-            </div>
-            <div class="service-card">
-                <img src="./images/services/ui ux.jpg" alt="UI/UX Design">
-                <h3 class="highlight">UI/UX Design</h3>
-                <p>My UI/UX design services are dedicated to crafting immersive and user-centric experiences. From
-                    conceptualizing and wireframing to prototyping and usability testing, I leverage industry-leading
+                </div>
+                <div class="service-card">
+                    <img src="./images/services/ui ux.jpg" alt="UI/UX Design">
+                    <h3 class="highlight">UI/UX Design</h3>
+                    <p>My UI/UX design services are dedicated to crafting immersive and user-centric experiences. From
+                        conceptualizing and wireframing to prototyping and usability testing, I leverage industry-leading
                     design
                     tools such as Adobe XD, Figma, and Sketch to create intuitive and visually stunning interfaces that
                     captivate users and elevate your brand presence.</p>
+                </div>
             </div>
-        </div>
-    </section>
-
-
-
-
+        </section>
+        
+        
+        
+        
+        <!-- Contact ME Section -->
+        <section id="contact">
+            <div class="c">
+                <div class="c-bg"></div>
+                <div class="c-wrapper">
+                    <div class="c-left">
+                        <div class="c-top contact-animation">
+                            <h2 class="c-title highlight">Let's Discuss Your Project</h2>
+                            <div class="c-info">
+                                <div class="c-info-item">
+                                    <img class="c-icon" src="./assets/phone.png" alt="Phone Icon">
+                                    +91 8587 003009
+                                </div>
+                                <div class="c-info-item">
+                                    <img class="c-icon" src="./assets/email.png" alt="Email Icon">
+                                    sumit182003@gmail.com
+                                </div>
+                                <div class="c-info-item">
+                                    <img class="c-icon" src="./assets/location.png" alt="Location Icon">
+                                    219, Munirka Village, New Delhi - 110067
+                                </div>
+                            </div>
+                            <p class="c-desc">Feel free to reach out to discuss your project requirements with me.</p>
+                        </div>
+                    </div>
+                    <div class="c-right">
+                        <form id="contact-form">
+                            <!-- Form fields go here -->
+                            <input type="text" placeholder="Name" name="user_name" id="user_name">
+                            <input type="text" placeholder="Subject" name="user_subject" id="user_subject">
+                            <input type="email" placeholder="Email" name="user_email" id="user_email">
+                            <textarea placeholder="Message..." name="message" id="message" rows="5"></textarea>
+                            <button class="highlight" type="submit">Submit</button>
+                            <div class="thanks" id="thanksMessage"></div>
+                        </form>
+                    </div>
+                </div>
+    
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+            <script src="./js/contact.js"></script>
+        </section>
 
 
     <script src="./js/main.js"></script>

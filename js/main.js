@@ -126,3 +126,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addEventListener('scroll', fadeInOnScroll);
 });
+
+
+// Dark mode 
+document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    // Toggle dark mode when checkbox is clicked
+    darkModeToggle.addEventListener('change', function() {
+        body.classList.toggle('dark-mode', this.checked);
+    });
+});
