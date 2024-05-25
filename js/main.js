@@ -18,11 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const greetingInterval = setInterval(updateGreeting, 150);
 
-    // Slide in content after splash screen
-    setTimeout(() => {
-        splashScreen.classList.add('hide');
-        document.querySelector('.content-wrapper').style.left = '0'; // Show content
-    }, 6000); // Adjust timing as needed
+    
 
     // Nav toggle for mobile view
     const navToggle = document.querySelector('.nav-toggle');
@@ -65,6 +61,68 @@ function toggleSidebar() {
     }
 }
 
-document.querySelector('.close-button').addEventListener('click', function() {
-    document.getElementById('mobileSidebar').style.transform = "translateX(-100%)";
+// Fade in for services section
+
+document.addEventListener("DOMContentLoaded", function() {
+    function fadeInOnScroll() {
+        const serviceSection = document.getElementById('service');
+        const sectionPosition = serviceSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (sectionPosition < screenPosition) {
+            serviceSection.classList.add('fade-in');
+        } else {
+            serviceSection.classList.remove('fade-in'); // Remove the fade-in class when the section is out of view
+        }
+    }
+
+    window.addEventListener('scroll', fadeInOnScroll);
+
+    // Trigger the function once on page load
+    fadeInOnScroll();
+});
+
+
+// fade in for contact
+document.addEventListener("DOMContentLoaded", function() {
+    function fadeInOnScroll() {
+        const contactSection = document.getElementById('contact');
+        const sectionPosition = contactSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (sectionPosition < screenPosition) {
+            contactSection.querySelector('.c-top').classList.add('fade-in');
+        } else {
+            contactSection.querySelector('.c-top').classList.remove('fade-in'); // Remove the fade-in class when the contact section is out of view
+        }
+    }
+
+    function checkContactSectionInView() {
+        fadeInOnScroll();
+        requestAnimationFrame(checkContactSectionInView); // Recursive call to continuously check if the contact section is in view
+    }
+
+    window.addEventListener('scroll', checkContactSectionInView);
+
+    // Trigger the function once on page load
+    checkContactSectionInView();
+});
+
+
+
+// animation for contact
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("the contact animation has triggered");
+    function fadeInOnScroll() {
+        const contactSection = document.getElementById('contact');
+        const sectionPosition = contactSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (sectionPosition < screenPosition) {
+            contactSection.querySelector('.c-top').classList.add('fade-in');
+            window.removeEventListener('scroll', fadeInOnScroll); // Remove the scroll event listener once animation starts
+        }
+    }
+
+    window.addEventListener('scroll', fadeInOnScroll);
 });

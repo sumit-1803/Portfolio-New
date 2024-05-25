@@ -8,6 +8,12 @@
     <link rel="shortcut icon" href="./assets/portfolio-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Poetsen+One&family=Poppins:wght@200;300&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -17,7 +23,7 @@
     <!-- Sidebar for mobile view -->
     <div class="sidebar">
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#Home">Home</a></li>
             <li><a href="#projects">My Projects</a></li>
             <li><a href="#service">Service</a></li>
             <li><a href="assets/RESUME 2024 updated.pdf" download>Resume</a></li>
@@ -26,31 +32,32 @@
     </div>
 
 
-<!-- Splash screen -->
+    <!-- Splash screen -->
     <div id="splash-screen" class="splash-screen">
         <div class="splash-content">
             <h1 id="greeting">Welcome</h1>
         </div>
     </div>
 
-<!-- navbar  -->
+    <!-- navbar  -->
     <header>
         <button class="nav-toggle">&#9776;</button>
         <nav>
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#Home" >Home</a></li>
                 <li><a href="#projects">My Projects</a></li>
                 <li><a href="#service">Service</a></li>
             </ul>
             <ul>
                 <li><a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/sumit1803/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-                <li><a href="assets/NEW RESUME 2024.pdf" download>Resume</a></li> 
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://www.linkedin.com/in/sumit1803/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </li>
+                <li><a href="assets/NEW RESUME 2024.pdf" download>Resume</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
             </ul>
         </nav>
     </header>
-    <section class="intro-section">
+    <section id="Home" class="intro-section">
         <div class="intro-content">
             <div class="intro-text">
                 <h1 class="hero-h1">I'm <span class="highlight">Sumit ,</span><br>A <span
@@ -65,16 +72,20 @@
     <section id="projects" class="works-section">
         <h2>My Works</h2>
         <div class="projects-grid">
+            <!-- 1 -->
             <div class="project-card">
-                <a target="_blank" href="https://github.com/sumit-1803/Coffee-Quality_Prediction"><img src="./images/coffee.jpg" alt="Coffee-Quality-Prediction"></a>
+                <a target="_blank" href="https://github.com/sumit-1803/Coffee-Quality_Prediction"><img
+                        src="./images/coffee.jpg" alt="Coffee-Quality-Prediction"></a>
                 <a target="_blank" href="https://github.com/sumit-1803/Coffee-Quality_Prediction">
                     <h3 class="highlight">Coffee Quality Prediction</h3>
                 </a>
                 <p>Coffee quality prediction ML model with 90% accuracy using random forest algorithm and made a
                     frontend using flask</p>
             </div>
+            <!-- 2 -->
             <div class="project-card">
-                <a target="_blank" href="https://github.com/sumit-1803/WellNest.AI"><img src="./images/wellnest.jpg" alt="WellNest.AI"></a>
+                <a target="_blank" href="https://github.com/sumit-1803/WellNest.AI"><img src="./images/wellnest.jpg"
+                        alt="WellNest.AI"></a>
                 <a target="_blank" href="https://github.com/sumit-1803/WellNest.AI">
                     <h3 class="highlight">WellNest.AI</h3>
                 </a>
@@ -82,8 +93,10 @@
                     disease, and estimate
                     calorie expenditure.</p>
             </div>
+            <!-- 3 -->
             <div class="project-card">
-                <a target="_blank" href="https://github.com/sumit-1803/Stock-Price-Prediction"><img src="./images/stockprice.jpg" alt="Stock-Price-Prediction"></a>
+                <a target="_blank" href="https://github.com/sumit-1803/Stock-Price-Prediction"><img
+                        src="./images/stockprice.jpg" alt="Stock-Price-Prediction"></a>
                 <a target="_blank" href="https://github.com/sumit-1803/Stock-Price-Prediction">
                     <h3 class="highlight">Stock Price Prediction</h3>
                 </a>
@@ -91,15 +104,76 @@
                     historical data,
                     providing accurate and real-time stock price forecasts via a user-friendly interface.</p>
             </div>
+            <!-- 4 -->
             <div class="project-card">
-                <a target="_blank" href="https://github.com/sumit-1803/Netflix-Main"><img src="./images/netflix.jpg" alt="Netflix-MERN-Stack-Clone"></a>
+                <a target="_blank" href="https://github.com/sumit-1803/Netflix-Main"><img src="./images/netflix.jpg"
+                        alt="Netflix-MERN-Stack-Clone"></a>
                 <a target="_blank" href="https://github.com/sumit-1803/Netflix-Main">
                     <h3 class="highlight" w>Netflix MERN Stack Clone</h3>
                 </a>
-                <p>INetflix Clone, built with the MERN stack, offers a seamless streaming experience with features
-                    like user
-                    authentication, video playback, and personalized recommendations, all within an intuitive and
-                    responsive interface.</p>
+                <p>Netflix Clone, constructed on the MERN stack, delivers a smooth streaming journey enriched with
+                    essential features
+                    such as user authentication, video playback, and personalized recommendations. It boasts an
+                    intuitive and responsive
+                    interface for seamless interaction.</p>
+            </div>
+            <!-- 5 -->
+            <div class="project-card">
+                <a target="_blank" href="https://64dc5396755a4a291921068f--gentle-elf-f2b22b.netlify.app/"><img
+                        src="https://images.unsplash.com/photo-1511405732889-ce3d6256f366?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYnNpdGV8ZW58MHwxfDB8fHww"
+                        alt="philosophy website"></a>
+                <a target="_blank" href="https://64dc5396755a4a291921068f--gentle-elf-f2b22b.netlify.app/">
+                    <h3 class="highlight" w>Clean UI Website</h3>
+                </a>
+                <p>Using React, I crafted a clean UI website to explore its concepts. Leveraging component-based
+                    architecture and JSX
+                    syntax, I created reusable components for dynamic user interfaces, gaining valuable insights into
+                    state management and
+                    React Router for seamless navigation.</p>
+            </div>
+            <!-- 6 -->
+            <div class="project-card">
+                <a target="_blank" href="https://sumit-1803.github.io/randomImage/"><img
+                        src="https://images.unsplash.com/photo-1501602757-8710f4e8dd63?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW1hZ2UlMjBnZW5lcmF0b3J8ZW58MHwxfDB8fHww"
+                        alt="Image Generator"></a>
+                <a target="_blank" href="https://sumit-1803.github.io/randomImage/">
+                    <h3 class="highlight" w>Image Generator</h3>
+                </a>
+                <p>In the process of learning how to use APIs, I created an Image Generator. This project allowed me to
+                    understand how to
+                    make API requests based on user queries and dynamically generate images according to the specified
+                    parameters.
+                </p>
+            </div>
+            <!-- 7 -->
+            <div class="project-card">
+                <a target="_blank" href="https://sumit-1803.github.io/Calcu.github.io/"><img
+                        src="https://plus.unsplash.com/premium_photo-1677109899683-9d449c66d9e8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FsY3VsYXRvcnxlbnwwfDF8MHx8fDA%3D"
+                        alt="calculator"></a>
+                <a target="_blank" href="https://sumit-1803.github.io/Calcu.github.io/">
+                    <h3 class="highlight" w>Basic calculator</h3>
+                </a>
+                <p>Created calculator with HTML structure, styled with CSS, added event listeners in JavaScript
+                    following The Odin Project..</p>
+            </div>
+            <!-- 8 -->
+            <div class="project-card">
+                <a target="_blank" href="https://github.com/sumit-1803/Coffee-Quality_Prediction"><img
+                        src="./images/coffee.jpg" alt="Coffee-Quality-Prediction"></a>
+                <a target="_blank" href="https://github.com/sumit-1803/Coffee-Quality_Prediction">
+                    <h3 class="highlight">Coffee Quality Prediction</h3>
+                </a>
+                <p>Coffee quality prediction ML model with 90% accuracy using random forest algorithm and made a
+                    frontend using flask</p>
+            </div>
+            <!-- many more... -->
+            <div class="project-card">
+                <a target="_blank" href=""><img src="https://annexechem.com/wp-content/uploads/2022/02/ManyMore.gif"
+                        alt="And many more .... "></a>
+                <a target="_blank" href="">
+                    <h3 class="highlight"></h3>
+                </a>
+                <p></p>
             </div>
         </div>
     </section>
@@ -111,7 +185,7 @@
             <div class="c-bg"></div>
             <div class="c-wrapper">
                 <div class="c-left">
-                    <div class="c-top">
+                    <div class="c-top contact-animation">
                         <h2 class="c-title highlight">Let's Discuss Your Project</h2>
                         <div class="c-info">
                             <div class="c-info-item">
@@ -120,14 +194,14 @@
                             </div>
                             <div class="c-info-item">
                                 <img class="c-icon" src="./assets/email.png" alt="Email Icon">
-                                Contact@sumit-1803.com
+                                sumit182003@gmail.com
                             </div>
                             <div class="c-info-item">
                                 <img class="c-icon" src="./assets/location.png" alt="Location Icon">
                                 219, Munirka Village, New Delhi - 110067
                             </div>
                         </div>
-                        <p class="c-desc">Feel free to reach out to discuss your project requirements with us.</p>
+                        <p class="c-desc">Feel free to reach out to discuss your project requirements with me.</p>
                     </div>
                 </div>
                 <div class="c-right">
@@ -153,36 +227,46 @@
         <h2 class="highlight">My Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <img src="./images/web dev.jpg" alt="Web Development">
+                <img src="./images/services/web dev.jpg" alt="Web Development">
                 <h3 class="highlight">Web Development</h3>
-                <p>"I provide personalized web development solutions, meticulously crafted to meet the unique requirements of your
-                business. Leveraging cutting-edge technologies including HTML, CSS, JavaScript, as well as advanced frameworks like
-                React and Node.js, I ensure that your digital presence reflects innovation and functionality at its best."</p>
+                <p>I provide personalized web development solutions, meticulously crafted to meet the unique
+                    requirements of
+                    your business. Leveraging cutting-edge technologies including HTML, CSS, JavaScript, as well as
+                    advanced
+                    frameworks like React and Node.js, I ensure that your digital presence reflects innovation and
+                    functionality at its best.</p>
             </div>
             <div class="service-card">
-                <img src="./images/mobile dev.jpg" alt="Mobile App Development">
+                <img src="./images/services/mobile dev.jpg" alt="Mobile App Development">
                 <h3 class="highlight">Mobile App Development</h3>
-                <p>My mobile app development services span across both iOS and Android platforms, offering comprehensive solutions crafted
-                with languages such as Swift and Kotlin. Leveraging versatile frameworks like React Native, I ensure the delivery of
-                seamless and top-tier mobile solutions that cater to your business needs with precision and excellence.</p>
+                <p>My mobile app development services span across both iOS and Android platforms, offering comprehensive
+                    solutions crafted with languages such as Swift and Kotlin. Leveraging versatile frameworks like
+                    React
+                    Native, I ensure the delivery of seamless and top-tier mobile solutions that cater to your business
+                    needs with precision and excellence.</p>
             </div>
             <div class="service-card">
-                <img src="./images/machine learning.jpg" alt="Machine Learning and Data Analysis">
+                <img src="./images/services/machine learning.jpg" alt="Machine Learning and Data Analysis">
                 <h3 class="highlight">Machine Learning and Data Analysis</h3>
-                <p>My machine learning services specialize in advanced data analysis and predictive modeling, harnessing the power of
-                cutting-edge technologies such as Python, TensorFlow, and scikit-learn. From predictive analytics to natural language
-                processing and data visualization, I provide tailored solutions to unlock insights and drive informed decisions for your
-                business.</p>
+                <p>My machine learning services specialize in advanced data analysis and predictive modeling, harnessing
+                    the
+                    power of cutting-edge technologies such as Python, TensorFlow, and scikit-learn. From predictive
+                    analytics to natural language processing and data visualization, I provide tailored solutions to
+                    unlock
+                    insights and drive informed decisions for your business.</p>
             </div>
             <div class="service-card">
-                <img src="./images/ui ux.jpg" alt="UI/UX Design">
+                <img src="./images/services/ui ux.jpg" alt="UI/UX Design">
                 <h3 class="highlight">UI/UX Design</h3>
-                <p>My UI/UX design services are dedicated to crafting immersive and user-centric experiences. From conceptualizing and
-                wireframing to prototyping and usability testing, I leverage industry-leading design tools such as Adobe XD, Figma, and
-                Sketch to create intuitive and visually stunning interfaces that captivate users and elevate your brand presence.</p>
+                <p>My UI/UX design services are dedicated to crafting immersive and user-centric experiences. From
+                    conceptualizing and wireframing to prototyping and usability testing, I leverage industry-leading
+                    design
+                    tools such as Adobe XD, Figma, and Sketch to create intuitive and visually stunning interfaces that
+                    captivate users and elevate your brand presence.</p>
             </div>
         </div>
     </section>
+
 
 
 
