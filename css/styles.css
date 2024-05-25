@@ -629,7 +629,7 @@ form button:hover {
 .nav-toggle {
     display: block; /* Make the toggle button visible */
     position: absolute;
-    right: 370px;
+    right: 50px;
     top: 10px;
     background: none;
     border: none;
