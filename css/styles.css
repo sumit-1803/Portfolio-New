@@ -8,6 +8,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
 }
+
+/* Splash screen */
 .splash-screen {
     position: fixed;
     top: 0;
@@ -24,7 +26,7 @@ body {
     visibility: visible;
 }
 
-.splash-content h1, .splash-content p {
+.splash-content h1 {
     color: #fff;
     font-size: 95px;
 }
@@ -40,15 +42,12 @@ body {
     transition: left 0.5s ease;
 }
 
-.hero-h1{
-    color: #fff;
-}
-
+/* Header styles */
 header {
     position: fixed;
     z-index: 1000;
     width: 99%;
-    background-color: #0C0C0C ;
+    background-color: #0C0C0C;
     padding: 10px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -84,22 +83,6 @@ nav a:hover {
     background-color: #F2613F;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    width: 30px;
-    height: 30px;
-}
-
-.logo span {
-    color: #ffffff;
-    font-size: 1.2em;
-}
-
 .nav-toggle {
     display: none;
     background: none;
@@ -109,48 +92,32 @@ nav a:hover {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-    }
-
-    nav ul.nav-open {
-        display: flex;
-    }
-
-    nav ul li {
-        width: 100%;
-    }
-
-    nav a {
-        display: block;
-        width: 100%;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    .logo {
-        margin: 20px 0;
-    }
-}
-
 
 /* Sidebar styles */
 .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0; /* Changed from -250px to 0 */
+    position: fixed; /* Assuming it should be fixed */
+    left: -250px; /* Width of the sidebar */
     width: 250px;
     height: 100%;
-    background-color: #0C0C0C; /* Sidebar background color */
-    transition: left 0.3s ease; /* Smooth transition when opening/closing */
-    z-index: 999; /* Ensure sidebar is above other content */
+    background-color: #333; /* Example color */
+    transition: left 0.3s; /* Smooth transition for toggling */
+}
+
+/* When .show-sidebar is added to the body, adjust the nav display */
+.show-sidebar nav {
+    display: block; /* This makes the nav visible when .show-sidebar is active */
+}
+
+/* This styles the sidebar specifically */
+.show-sidebar .sidebar {
+    position: fixed; /* Fixed to the viewport */
+    left: 0; /* Adjust this as necessary to align it correctly */
+    top: 0;
+    width: 250px; /* Width of the sidebar */
+    height: 100%;
+    background-color: #333; /* Sidebar background color */
+    z-index: 1500; /* Make sure this is above other content */
+    transition: left 0.3s ease-in-out; /* Smooth transition for sliding in and out */
 }
 
 .sidebar ul {
@@ -178,6 +145,7 @@ nav a:hover {
 .show-sidebar .sidebar {
     left: 0;
 }
+
 
 /* Intro section styles */
 .intro-section {
@@ -313,6 +281,8 @@ h3:hover{
     color: #e04c2b;
 }
 
+
+/* Works section */
 .works-section {
     background-color: #fff;
     padding: 10px 20px;
@@ -329,31 +299,27 @@ h3:hover{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    max-width: 1300px; /* Ensure the grid doesn't stretch too wide */
-    margin: 0 auto; /* Center the grid */
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .project-card {
-    background: linear-gradient(to bottom,#0C0C0C  , #333) ;
+    background: linear-gradient(to bottom, #0C0C0C, #333);
     color: #fff;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden; /* Prevent overflow */
-    height: auto;
-    width: 40vw;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .project-card img {
-    max-width: 50vh;
-    border-radius: 25px;
-    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
 }
-
 .project-card h3 {
     /* color: #fff; */
     font-size: 1.5em;
@@ -462,10 +428,10 @@ form button:hover {
 }
 
 
-/* Services Section */
+/* Services section */
 .services-section {
-    padding: 50px 20px;
-    background-color: #fff;
+    background-color: #f8f8f8;
+    padding: 10px 20px;
     text-align: center;
 }
 
@@ -475,29 +441,21 @@ form button:hover {
     margin-bottom: 20px;
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .service-card {
     background: linear-gradient(to bottom, #0C0C0C, #333);
     color: #fff;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
 }
 
 .service-card img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 15px 15px 0 0;
 }
 
@@ -528,6 +486,10 @@ form button:hover {
     }
 
     /* Navigation */
+
+    nav{
+            margin-top: 50px;
+    }
     nav ul {
         display: none;
         flex-direction: column;
@@ -549,33 +511,86 @@ form button:hover {
         width: 100%;
     }
 
-    .nav-toggle {
-        display: block;
-    }
+    /* Adjust button styles for mobile */
+.nav-toggle {
+    display: block; /* Make the toggle button visible */
+    position: absolute;
+    right: 410px;
+    top: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
 
-    .logo {
-        margin: 20px 0;
-    }
+    /* Intro section styles */
+.intro-section {
+    background: linear-gradient(to bottom, #0C0C0C, #333);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 88vh;
+    animation: fadeIn 1s ease-out;
+}
 
-    /* Intro section */
-    .intro-content {
-        gap: 20px; /* Adjust gap for smaller screens */
-    }
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    gap: 50px;
+    flex-wrap: wrap;
+    position: relative;
+}
 
-    .intro-text {
-        max-width: 100%; /* Ensure text doesn't overflow on smaller screens */
-    }
+.intro-text {
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
 
-    /* Project cards */
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    .project-card {
-        width: 90%;
-        height: auto; /* Allow the height to adjust proportionally */
-    }
+.intro-text .hello {
+    font-size: 1.2em;
+    color: #F2613F;
+}
 
+.intro-text {
+    font-size: 3em;
+    line-height: 1.2;
+    color: #fff;
+    position: relative;
+}
+
+.intro-text .highlight {
+    color: #F2613F;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     /* Contact section */
+
+.contact-section {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
     .c{
         height: 100%;
     }
@@ -628,3 +643,4 @@ form button:hover {
         transform: translateY(0);
     }
 }
+
