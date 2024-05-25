@@ -75,6 +75,11 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
+
+nav a i {
+    font-size: 20px; /* Adjust icon size as needed */
+}
+
 nav a.active {
     background-color: #F2613F;
 }
@@ -191,8 +196,8 @@ nav a:hover {
 
 .intro-text .highlight {
     color: #F2613F;
+    animation: slide-in-out 2s infinite alternate; /* Add animation property */
 }
-
 
 .intro-text blockquote {
     font-style: italic;
@@ -259,17 +264,17 @@ nav a:hover {
     }
 
 }
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+@keyframes slide-in-out {
+    0% {
+        transform: translateX(0); /* Start from current position */
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    50% {
+        transform: translateX(60px); /* Slide to the right */
+    }
+    100% {
+        transform: translateX(0); /* Return to original position */
     }
 }
-
 
 /* Hero Section ends  */
 
@@ -448,6 +453,15 @@ form button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 15px;
     transition: transform 0.3s ease;
+    max-width: 80%;
+    height: auto;
+}
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatically fit columns with a minimum width of 300px */
+    gap: 20px; /* Adjust the gap between the service cards */
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .service-card:hover {
@@ -455,9 +469,10 @@ form button:hover {
 }
 
 .service-card img {
-    width: 100%;
-    border-radius: 15px 15px 0 0;
+    max-width: 100%; /* Set the maximum width of the images to 100% of their container */
+    height: auto; /* Ensure the aspect ratio of the images is maintained */
 }
+
 
 .service-card h3 {
     font-size: 1.5em;
@@ -567,8 +582,8 @@ form button:hover {
 
 .intro-text .highlight {
     color: #F2613F;
+    animation: slide-in-out 2s infinite alternate; /* Add animation property */
 }
-
 @keyframes fadeIn {
     from {
         opacity: 0;
