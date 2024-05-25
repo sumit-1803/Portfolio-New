@@ -130,11 +130,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Dark mode 
 document.addEventListener("DOMContentLoaded", function() {
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
+    const toggleCheckbox = document.getElementById('dark-mode-toggle');
 
-    // Toggle dark mode when checkbox is clicked
-    darkModeToggle.addEventListener('change', function() {
-        body.classList.toggle('dark-mode', this.checked);
+    toggleCheckbox.addEventListener('change', function() {
+        if (toggleCheckbox.checked) {
+            document.body.classList.add('dark-mode');
+        } else {
+            document.body.classList.remove('dark-mode');
+        }
     });
 });
