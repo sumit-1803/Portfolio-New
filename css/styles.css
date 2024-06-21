@@ -351,8 +351,7 @@ h3:hover{
 
 /* Works section */
 .works-section {
-     padding: 20px;
-    overflow: hidden;
+    padding: 20px;
 }
 
 .works-section h2 {
@@ -360,21 +359,23 @@ h3:hover{
     font-size: 2em;
     margin-bottom: 20px;
 }
+
+/* Wrapper for horizontal scrolling */
 .projects-wrapper {
-    overflow: hidden; /* Hide overflow of cards */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    white-space: nowrap; /* Prevent line breaks */
 }
 
 .projects-grid {
-    display: flex;
-    flex-wrap: nowrap;
+    display: inline-flex; /* Use inline-flex to keep the grid in a single line */
     gap: 20px;
-    animation: slide 8s linear infinite;
+    animation: slide 16s linear infinite; /* Adjusted timing for smoother animation */
 }
+
 .projects-grid:hover {
     animation-play-state: paused; /* Pause animation on hover */
 }
-
-
 
 .project-card {
     width: 250px;
@@ -383,15 +384,38 @@ h3:hover{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 10px;
+    background: #f9f9f9; /* Added background for better visibility */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for better separation */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #555;
+    white-space: normal; /* Allow text to wrap */
 }
 
 /* Keyframes for scrolling animation */
-@keyframes scroll {
+@keyframes slide {
     0% {
         transform: translateX(0); /* Start from initial position */
     }
     100% {
-        transform: translateX(calc(-100% - 20px)); /* Move to the left by the width of one card plus margin */
+        transform: translateX(-100%); /* Move to the left by the width of one card plus margin */
     }
 }
 
@@ -399,36 +423,12 @@ h3:hover{
     transform: translateY(-5px);
 }
 
-.project-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 5; /* This sets the aspect ratio to 4:5 */
-    object-fit: cover;
-    border-radius: 8px; /* Optional: add rounded corners */
-}
-.project-card h3 {
-   margin: 10px 0;
-    font-size: 1.2em;
-}
-
-.project-card p {
-    font-size: 1em;
-    color: #555;
-}
-
 @media (max-width: 768px) {
     .projects-grid {
-        grid-template-columns: 1fr;
+        flex-wrap: nowrap;
     }
 }
-@keyframes slide {
-    0% {
-        transform: translateX(0); /* Start from initial position */
-    }
-    100% {
-        transform: translateX(-100%); /* Move cards to the left */
-    }
-}
+
 
 /* Contact me  */
 .c {
@@ -749,7 +749,7 @@ form button:hover {
 .contact-animation {
     opacity: 0; /* Initially hide the section */
     transform: translateY(-150px); /* Start with a slight upward offset */
-    transition: opacity 15s ease-out, transform 1s ease-out; /* Smooth fade-in and slide-down effect */
+    transition: opacity 8s ease-out, transform 1s ease-out; /* Smooth fade-in and slide-down effect */
 }
 
 .contact-animation.fade-in {

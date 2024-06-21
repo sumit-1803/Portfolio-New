@@ -112,7 +112,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // animation for contact
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("the contact animation has triggered");
     function fadeInOnScroll() {
         const contactSection = document.getElementById('contact');
         const sectionPosition = contactSection.getBoundingClientRect().top;
