@@ -208,7 +208,10 @@ nav a:hover {
 
 /* Intro section styles */
 .intro-section {
-    background: linear-gradient(to bottom, #0C0C0C, #333);
+    background-image: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: none;
+    background-size: cover;
+    /* background: linear-gradient(to bottom, #0C0C0C, #333); */
     padding: 50px 20px;
     display: flex;
     justify-content: center;
@@ -242,6 +245,7 @@ nav a:hover {
     max-width: 600px;
     position: relative;
     z-index: 1;
+    margin-bottom: 25rem;
 }
 
 .intro-text .hello {
@@ -370,7 +374,7 @@ h3:hover{
 .projects-grid {
     display: inline-flex; /* Use inline-flex to keep the grid in a single line */
     gap: 20px;
-    animation: slide 16s linear infinite; /* Adjusted timing for smoother animation */
+    animation: slide 35s linear infinite; /* Adjusted timing for smoother animation */
 }
 
 .projects-grid:hover {
@@ -640,7 +644,8 @@ form button:hover {
 
     /* Intro section styles */
 .intro-section {
-    background: linear-gradient(to bottom, #0C0C0C, #333);
+    
+
     padding: 50px 20px;
     display: flex;
     justify-content: center;
@@ -648,6 +653,8 @@ form button:hover {
     flex-direction: column;
     text-align: center;
     height: 88vh;
+    background-position: 50%;
+    background-size: cover;
     animation: fadeIn 1s ease-out;
 }
 
