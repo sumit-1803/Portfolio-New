@@ -372,6 +372,7 @@ h3:hover{
 }
 
 .projects-grid {
+    margin: 10px;
     display: inline-flex; /* Use inline-flex to keep the grid in a single line */
     gap: 20px;
     animation: slide 35s linear infinite; /* Adjusted timing for smoother animation */
@@ -381,7 +382,7 @@ h3:hover{
     animation-play-state: paused; /* Pause animation on hover */
     transform: scale(0.98);
  border-radius: 20px;
- box-shadow: 0px 0px 20px 10px rgba(0, 255, 117, 0.5);
+ box-shadow: 0px 0px 20px 10px rgba(224, 76, 43, 0.5);
 }
 
 .project-card {
@@ -429,7 +430,7 @@ h3:hover{
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 0px 20px 10px rgba(0, 255, 117, 0.5);
+    box-shadow: 0px 10px 30px 15px rgba(224, 76, 43, 0.5);
 }
 
 @media (max-width: 768px) {
