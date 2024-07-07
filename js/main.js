@@ -127,15 +127,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Dark mode 
+// dark mode for component with id as Home on change in toggle with class toggle-label add background-color as black
 document.addEventListener("DOMContentLoaded", function() {
-    const toggleCheckbox = document.getElementById('dark-mode-toggle');
+    const toggleSwitch = document.getElementById('dark-mode-toggle');
 
-    toggleCheckbox.addEventListener('change', function() {
-        if (toggleCheckbox.checked) {
+    toggleSwitch.addEventListener('change', function() {
+        if (toggleSwitch.checked) {
             document.body.classList.add('dark-mode');
         } else {
             document.body.classList.remove('dark-mode');
         }
     });
 });
+
+
+
