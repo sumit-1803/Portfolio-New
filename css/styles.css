@@ -400,14 +400,10 @@ h3:hover {
     margin-bottom: 20px;
 }
 
-/* Wrapper for horizontal scrolling */
 .projects-wrapper {
     overflow-x: auto;
-    /* Enable horizontal scrolling */
     overflow-y: hidden;
-    /* Hide vertical overflow */
     white-space: nowrap;
-    /* Prevent line breaks */
 }
 
 .projects-grid {
@@ -965,4 +961,62 @@ button.wq .span-mother2 span:nth-child(6) {
 
 .topmargin {
     margin-top: 60px;
+}
+
+
+
+
+/* tech stack section */
+
+
+.stack-wrapper {
+    background-color: #efefef;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.grey{
+    color: grey;
+}
+
+.contain{
+    max-width: 1200px;
+    margin-top: 150px;
+    padding: 20px;
+
+}
+.tech-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.tech-list:hover{
+    color: #F2613F;
+}
+
+.tech-list i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.tech-list p {
+    margin: 0;
 }
