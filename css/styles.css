@@ -293,6 +293,11 @@ nav a:hover {
     color: #F2613F;
     animation: slide-in-out 2s infinite alternate;
     margin-top: 0;
+    
+}
+.highlightnew{
+    color: #F2613F;
+    font-size: 1.5em;
 }
 
 .intro-text blockquote {
@@ -1019,4 +1024,40 @@ button.wq .span-mother2 span:nth-child(6) {
 
 .tech-list p {
     margin: 0;
+}
+
+@media screen and (max-width: 768px){
+    .stack-wrapper {
+        height: 100vh;
+        /* max-width: 50%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .helloimage{
+        display: none;
+    }
+
+    .fon{
+        font-size: large;
+    }
+    
+    .tech-grid{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .tech-p{
+        font-size: 11px;
+    }
+    .tech-list i {
+        font-size: 2rem;
+    }
+    
+}
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
