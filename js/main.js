@@ -20,22 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 
-    // Nav toggle for mobile view
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLists = document.querySelectorAll('nav ul');
-
-    navToggle.addEventListener('click', () => {
-        navLists.forEach(navList => navList.classList.toggle('nav-open'));
-        document.querySelector('header').classList.toggle('show-sidebar');
-
-        document.querySelector('.menu-icon').addEventListener('click', function() {
-    document.body.classList.toggle('show-sidebar');
-});
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-    document.body.classList.toggle('show-sidebar');
-});
-
-    });
 
     // Dynamic title update
     const titleWrapper = document.querySelector('.i-title-wrapper');
@@ -142,3 +126,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navMenu = document.querySelector(".nav-menu");
+    const navSocials = document.querySelector(".nav-socials");
+    const navLinks = document.querySelectorAll(".nav-menu a");
+
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+        navSocials.classList.toggle("show");
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("show");
+            navSocials.classList.remove("show");
+        });
+    });
+});
