@@ -146,3 +146,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+//email js 
+document.addEventListener('DOMContentLoaded', () => {
+    emailjs.init('v8wNgPKmZpEGXK_ZB'); // Replace with your EmailJS user ID
+
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const serviceID = 'service_bozfmec'; // Replace with your service ID
+        const templateID = 'template_o56rgfv'; // Replace with your template ID
+
+        emailjs.sendForm(serviceID, templateID, this).then(
+            (response) => {
+                alert('Message sent successfully!');
+            },
+            (error) => {
+                alert('Failed to send message. Please try again.');
+            }
+        );
+    });
+});
