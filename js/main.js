@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (sectionPosition < screenPosition) {
             serviceSection.classList.add('fade-in');
         } else {
-            serviceSection.classList.remove('fade-in'); // Remove the fade-in class when the section is out of view
+            serviceSection.classList.remove('fade-in');
         }
     }
 

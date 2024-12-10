@@ -44,7 +44,7 @@ body {
 }
 
 .intro-section {
-    background-color: #f5f5f5;
+    background-color: black;
     color: #0c0c0c; 
     text-align: center; 
     padding: 100px 0; 
@@ -59,7 +59,7 @@ body {
 }
 
 body.dark-mode .intro-section {
-    background-color: #0c0c0c;
+    background-color: #fff;
     color: #fff; /* Text color in dark mode */
 }
 
@@ -527,6 +527,11 @@ h3:hover {
     margin-right: 10px;
 }
 
+.c-icon-mail{
+    width: 24px;
+    margin-right: 10px;
+}
+
 .c-desc {
     margin-bottom: 20px;
     color: #555;
@@ -699,9 +704,7 @@ form button:hover {
     }
 
     /* Intro section styles */
-    .intro-section {
-
-
+    .intro-section {        
         padding: 50px 20px;
         display: flex;
         justify-content: center;
